@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.system-container,
+.chat-container,
+.setting-container {
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    background-color: #fff;
+    max-width: 60%;
+}
+
+.system-container,
+.setting-container {
+    background-color: #f2f2f2;
+    max-width: 20%;
+}
+
+.system {
+    margin-bottom: 10px;
+}
+
+.system textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    resize: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.chat {
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.user {
+    color: blue;
+    font-weight: bold;
+}
+
+.assistant {
+    color: green;
+    font-weight: bold;
+}
+
+.text {
+    margin-left: 5px;
+    width: 100%;
+    min-height: 24px;
+    resize: vertical;
+}
+
+.delete {
+    float: right;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    resize: none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.setting input[type="text"],
+.setting select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.input .add-user {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .system-container,
+    .chat-container,
+    .setting-container {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+
+    .tab-button {
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .tab-button.active {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .system-container,
+    .chat-container,
+    .setting-container {
+        display: none;
+    }
+
+    .system-container.active,
+    .chat-container.active,
+    .setting-container.active {
+        display: block;
+    }
+}
+
+.setting button#apiKeyButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.setting button#apiKeyButton:hover {
+    background-color: #45a049;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.chat-container {
+    position: relative;
+}
+
+.chat-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chat-footer button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 769px) {
+    .tab-buttons {
+        display: none;
+    }
+}
+.preset-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.preset-buttons button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preset-buttons button:hover {
+    background-color: #45a049;
+}
+.range-container {
+    margin-top: 20px;
+}
+
+.range-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.range-label label {
+    margin-right: 10px;
+}
+
+.range-container input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+.chat {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: calc(100% - 100px); /* Subtract the height of the chat footer */
+}
