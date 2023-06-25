@@ -192,6 +192,9 @@ function initializeTabs() {
         systemTabButton.classList.remove("active");
         chatTabButton.classList.add("active");
         settingTabButton.classList.remove("active");
+        document.querySelectorAll(".text").forEach((el) => {
+            adjustHeight(el);
+        });
     });
 
     settingTabButton.addEventListener("click", function () {
