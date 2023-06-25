@@ -5,7 +5,6 @@ const startUpPreset = presets[localStorage.getItem("startUpPreset")]
     ? localStorage.getItem("startUpPreset")
     : "";
 let models = [];
-// apiKey = "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";
 function deleteMessage(button) {
     const message = button.closest(".message");
     message.parentNode.removeChild(message);
@@ -74,7 +73,9 @@ function setApiKey() {
                 localStorage.setItem(localStorageApiKey, key);
                 apiKey = key;
             }
-            fetchModel();
+            fetchModel().then(() => {
+                generateModelOptions();
+            });
         });
 }
 
@@ -356,7 +357,7 @@ function saveChat() {
 function loadChat(startUp = false) {
     const chatPresetSelect = document.querySelector("#chatPresetSelect");
     const chatPreset = chatPresetSelect.value;
-    const preset = startUpPreset ?? chatPreset;
+    const preset = startUp ? startUpPreset : chatPreset;
     if (!startUp) {
         if (!confirm(`Load ${chatPreset}?`)) {
             return;
