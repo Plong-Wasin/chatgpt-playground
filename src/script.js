@@ -89,6 +89,7 @@ async function fetchModel() {
     const data = await response.json();
     if (data.error) {
         document.querySelector("#apiKeyButton").click();
+        return;
     }
     models = data.data.filter((model) => {
         // return id prefix chat

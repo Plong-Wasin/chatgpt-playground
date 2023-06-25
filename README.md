@@ -9,6 +9,10 @@ Welcome to the ChatGPT Playground project! This is a static website that provide
 - **Customization:** Fine-tune the model's behavior by tweaking parameters and configurations.
 - **Learn and Study:** Use the playground to study conversational AI, language generation, and natural language understanding.
 
+## Demo
+
+- [Click here](https://plong-wasin.github.io/chathgpt-playground/)
+
 ## Getting Started
 
 Simply clone or download the repository and open the `index.html` file in a web browser to start using the ChatGPT Playground.
