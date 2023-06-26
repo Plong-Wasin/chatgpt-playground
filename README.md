@@ -11,7 +11,7 @@ Welcome to the ChatGPT Playground project! This is a static website that provide
 
 ## Demo
 
-- [Click here](https://plong-wasin.github.io/chathgpt-playground/)
+- [Click here](https://plong-wasin.github.io/chatgpt-playground/)
 
 ## Getting Started
 
