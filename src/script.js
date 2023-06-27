@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     reloadStartUpPreset();
     document.querySelector("#startUpPresetSelect").value = startUpPreset;
     document.querySelector("#chatPresetSelect").value = startUpPreset;
-    autoResizeTextArea();
     initializeTabs();
     setApiKey();
     if (startUpPreset) {

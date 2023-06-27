@@ -31,11 +31,12 @@ body {
 
 .system {
     margin-bottom: 10px;
+    height: 95%;
 }
 
 .system textarea {
     width: 100%;
-    height: 100px;
+    height: 100%;
     border: none;
     resize: none;
     padding: 5px;
@@ -102,6 +103,7 @@ body {
     justify-content: center;
     padding: 10px 0;
 }
+
 .input .add-user {
     font-size: 20px;
     width: 30px;
@@ -174,11 +176,13 @@ body {
 .setting button#apiKeyButton:hover {
     background-color: #45a049;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 .chat-container {
     position: relative;
 }
@@ -213,6 +217,7 @@ label {
         display: none;
     }
 }
+
 .preset-buttons {
     display: flex;
     justify-content: space-between;
@@ -230,6 +235,7 @@ label {
 .preset-buttons button:hover {
     background-color: #45a049;
 }
+
 .range-container {
     margin-top: 20px;
 }
@@ -249,8 +255,10 @@ label {
     width: 100%;
     margin-top: 5px;
 }
+
 .chat {
     padding: 10px;
     overflow-y: auto;
-    max-height: calc(100% - 100px); /* Subtract the height of the chat footer */
+    max-height: calc(100% - 100px);
+    /* Subtract the height of the chat footer */
 }
